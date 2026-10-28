@@ -419,6 +419,28 @@ nav a:focus-visible,
   outline-offset: 3px;
 }
 
+.wa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--bg);
+  background: var(--text);
+  border-radius: 6px;
+  padding: 12px 20px;
+}
+
+.wa-btn .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.wa-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 /* Show the moon in light mode, the sun in dark mode */
 #theme-toggle .icon-sun {
   display: none;
