@@ -38,7 +38,8 @@ contactForm.addEventListener('submit', (e) => {
 
     // Your WhatsApp number in international format (233 = Ghana, leading 0 dropped)
     const phoneNumber = "233593798620";
-    const whatsappMessage = `Hello, my name is ${name} (${email}). Message: ${message}`;
+    const emailPart = email ? ` (${email})` : '';
+    const whatsappMessage = `Hello, my name is ${name}${emailPart}. Message: ${message}`;
     const encodedMessage = encodeURIComponent(whatsappMessage);
 
     // Open WhatsApp with the pre-filled message

@@ -128,7 +128,7 @@ nav a:hover {
   font-weight: 700;
   line-height: 1.08;
   letter-spacing: -0.035em;
-  max-width: 14ch;
+  max-width: 18ch;
   margin-bottom: 20px;
 }
 
@@ -137,27 +137,82 @@ nav a:hover {
   max-width: 48ch;
 }
 
-/* ---------- Skills ---------- */
-.skills-grid {
-  display: grid;
+/* ---------- Hero buttons ---------- */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
   gap: 12px;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  margin-top: 28px;
 }
 
-.skill-card {
-  display: flex;
+.btn {
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  border: 1px solid var(--line);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btn .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.btn-primary {
+  color: var(--bg);
+  background: var(--text);
+}
+
+.btn-ghost {
+  color: var(--text);
+  background: transparent;
+}
+
+.btn-ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ---------- Services ---------- */
+.services-grid {
+  display: grid;
   gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.service-card {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 6px;
-  padding: 16px;
-  font-weight: 500;
+  padding: 20px;
 }
 
-.skill-card .icon,
-.project-card .icon {
+.service-card .icon {
   color: var(--accent);
+  margin-bottom: 14px;
+}
+
+.service-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.service-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.stack-note {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 16px;
 }
 
 /* ---------- Projects ---------- */
@@ -215,9 +270,32 @@ nav a:hover {
   font-size: 0.92rem;
 }
 
+.project-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.project-tag::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
 /* ---------- Contact ---------- */
 .contact-section {
-  padding-bottom: 120px;
+  padding-bottom: 72px;
+}
+
+.contact-intro {
+  color: var(--muted);
+  max-width: 48ch;
+  margin-bottom: 24px;
 }
 
 #contact-form {
@@ -299,6 +377,14 @@ nav a:hover {
   height: 20px;
 }
 
+.site-footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px 96px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
 /* ---------- Floating theme button ---------- */
 #theme-toggle {
   position: fixed;
@@ -327,6 +413,7 @@ nav a:hover {
 nav a:focus-visible,
 .socials a:focus-visible,
 .project-card:focus-visible,
+.btn:focus-visible,
 .send-btn:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
