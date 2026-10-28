@@ -42,6 +42,11 @@ contactForm.addEventListener('submit', (e) => {
     const whatsappMessage = `Hello, my name is ${name}${emailPart}. Message: ${message}`;
     const encodedMessage = encodeURIComponent(whatsappMessage);
 
-    // Open WhatsApp with the pre-filled message
-    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+    // Open WhatsApp with the pre-filled message.
+    // If the browser blocks the new tab, open WhatsApp in this tab instead.
+    const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    const newTab = window.open(url, '_blank');
+    if (!newTab) {
+        window.location.href = url;
+    }
 });
