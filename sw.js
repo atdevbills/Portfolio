@@ -3,7 +3,9 @@ const urlsToCache = [
   '/Portfolio/',
   '/Portfolio/index.html',
   '/Portfolio/style.css',
-  '/Portfolio/script.js'
+  '/Portfolio/script.js',
+  '/Portfolio/icon-192.png',
+  '/Portfolio/icon-512.png'
 ];
 
 // Install the service worker and cache files
