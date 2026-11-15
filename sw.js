@@ -1,9 +1,9 @@
 const CACHE_NAME = 'devbills-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/style.css',
-  '/script.js'
+  '/Portfolio/',
+  '/Portfolio/index.html',
+  '/Portfolio/style.css',
+  '/Portfolio/script.js'
 ];
 
 // Install the service worker and cache files
